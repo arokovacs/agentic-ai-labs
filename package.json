@@ -1,0 +1,39 @@
+{
+  "name": "agentic-ai-labs",
+  "version": "1.0.0",
+  "description": "Code-along labs (TypeScript) for the Devoteam x CESI 'Agentic AI' workshop — LLM -> RAG -> Agentic RAG -> Agent (+tools/MCP) -> Multi-agents.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "smoke": "tsx src/shared/smoke.ts",
+    "lab1": "tsx src/lab1-baseline.ts",
+    "lab2": "tsx src/lab2-rag/run.ts",
+    "lab3": "tsx src/lab3-observability/run.ts",
+    "lab4": "tsx src/lab4-agentic-rag/run.ts",
+    "lab5": "tsx src/lab5-tools-mcp/run.ts",
+    "lab6": "tsx src/lab6-react-agent/run.ts",
+    "lab7": "tsx src/lab7-supervisor/run.ts",
+    "lab8": "tsx src/lab8-eval/run.ts",
+    "lab9": "tsx src/lab9-guards/run.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.40",
+    "@langchain/langgraph": "^0.2.50",
+    "@langchain/mcp-adapters": "^0.4.5",
+    "@langchain/mistralai": "^0.2.1",
+    "@langchain/textsplitters": "^0.1.0",
+    "dotenv": "^16.4.7",
+    "langchain": "^0.3.15",
+    "langsmith": "^0.3.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
