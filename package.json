@@ -18,7 +18,8 @@
     "lab7": "tsx src/lab7-supervisor/run.ts",
     "lab8": "tsx src/lab8-eval/run.ts",
     "lab9": "tsx src/lab9-guards/run.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "postinstall": "node scripts/patch-mistral-reference.js"
   },
   "dependencies": {
     "@langchain/core": "^0.3.40",

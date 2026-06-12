@@ -38,6 +38,9 @@ export function createChatModel(options: ChatModelOptions = {}): BaseChatModel {
     model: options.model ?? env.MISTRAL_CHAT_MODEL,
     temperature: options.temperature ?? 0,
     maxTokens: options.maxTokens ?? env.MAX_OUTPUT_TOKENS,
+    // Streaming désactivé : le SDK 0.2.x ne gère pas les blocs « reference »
+    // que Mistral renvoie désormais en mode stream (ZodError sur content type).
+    streaming: false,
   });
 }
 
